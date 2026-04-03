@@ -4,8 +4,9 @@ SRC_DIR := src
 OBJ_DIR := obj
 BIN_DIR := bin
 INS_DIR := bin
+AGIMUS_BIN_DIR := ../bin
 
-EXE := $(BIN_DIR)/solventmixtures
+EXE := $(BIN_DIR)/autosolvent
 SRC := $(wildcard $(SRC_DIR)/*.cpp)
 OBJ := $(SRC:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
 
@@ -32,5 +33,6 @@ clean:
 
 install: 
 	cp $(EXE) $(INS_DIR)
+	cp $(EXE) $(AGIMUS_BIN_DIR)
 
 -include $(OBJ:.o=.d)
